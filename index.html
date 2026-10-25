@@ -43,7 +43,20 @@
     </section>
     
     <section id="contenidoHTML">
-        <!-- Contenido de este apartado -->
+        <h2>¿Quieres ver un ejemplo de lo que puedes hacer con JavaScript?</h2>
+
+        <p id="demo">Con JavaScript puedes cambiar el contenido del HTML.</p>
+
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "Hola, soy JavaScript!"'>¡Pulsa aquí y verás!</button>
+
+        <h3>Vamos a explicar paso a paso lo que hace el pequeño programa anterior.</h3>
+        <p>Todas las instrucciones están incluidas dentro del botón. Tenemos tres partes diferenciadas:</p>
+        <ul>
+          <li>onclick: aquí indicamos que el código se ejecutará al presionar el botón.</li>
+          <li>getElementById("demo"): accede al elemento en el documento con el id "demo".</li>
+          <li>innerHTML: cambia el texto de la etiqueta "p" por el que añadimos a continuación.</li>
+        </ul>
+        <p>¡Y por eso al pulsar nos saluda JavaScript!</p>
     </section>
 
     <section id="estilosCSS">
