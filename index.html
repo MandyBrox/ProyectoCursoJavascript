@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Curso JavaScript con interacciones HTML</title>
+  <title>Documentación del proyecto Curso JavaScript con interacciones HTML</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
 
@@ -14,93 +14,303 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 <header>
 
-  <h1>CURSO INTERACCIONES</h1>
+  <h1>DOCUMENTACIÓN DEL PROYECTO</h1>
 
-  <nav>
+<nav>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#contenidoHTML">Modificar contenido HTML</a></li>
-      <li><a href="#estilosCSS">Modificar estilos CSS</a></li>
-      <li><a href="#atributosHTML">Modificar atributos HTML</a></li>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#git">Git y Git Flow</a></li>
+        <li><a href="#usuario1">Usuario 1: estructura inicial</a></li>
+        <li><a href="#usuario2">Usuario 2: contenido HTML</a></li>
+        <li><a href="#usuario2atributos">Usuario 2: atributos HTML</a></li>
+        <li><a href="#usuario3">Usuario 3: estilos CSS</a></li>
+        <li><a href="#usuario3release">Release v1.0</a></li>
+        <li><a href="#usuario1hotfix">Hotfix</a></li>
     </ul>
-  </nav>
+</nav>
 </header>
+
+<br/>
 
   <main>
     <section id="home">
-      <p>En esta página encontrarás un curso completo donde aprenderás JavaScript aplicado a interacciones con HTML. ¡Diviértete aprendiendo!</p>
+      <p>En esta página se explicará Git y Git Flow, además de una explicación detallada del proceso realizado en este proyecto.</p>
     </section>
+
+    <br/>
     
-    <section id="contenidoHTML">
-        <h2>¿Quieres ver un ejemplo de lo que puedes hacer con JavaScript?</h2>
+    <section id="git">
+        <h2>¿Qué es Git y Git Flow?</h2>
 
-        <p id="demo">Con JavaScript puedes cambiar el contenido del HTML.</p>
-
-        <button type="button" onclick='document.getElementById("demo").innerHTML = "Hola, soy JavaScript!"'>¡Pulsa aquí y verás!</button>
-
-        <button type="button" onclick='document.getElementById("demo").innerHTML = "Con JavaScript puedes cambiar el contenido del HTML."'>Volver al texto original</button>
-
-        <h3>Vamos a explicar paso a paso lo que hace el pequeño programa anterior.</h3>
-        <p>Todas las instrucciones están incluidas dentro del botón. Tenemos tres partes diferenciadas:</p>
-        <ul>
-          <li>onclick: aquí indicamos que el código se ejecutará al presionar el botón.</li>
-          <li>getElementById("demo"): accede al elemento en el documento con el id "demo".</li>
-          <li>innerHTML: cambia el texto de la etiqueta "p" por el que añadimos a continuación.</li>
-        </ul>
-        <p>¡Y por eso al pulsar nos saluda JavaScript!</p>
+        <p>Git es un sistema de control de versiones que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que se puedan recuperar versiones específicas más adelante.</p>
+        <p>Git Flow es una metodología de Git que proporciona una estructura definida para cómo se deben organizar y utilizar las ramificaciones en un repositorio Git. La metodología Git Flow se centra en la idea de tener diferentes tipos de ramas para diferentes tipos de trabajo en un proyecto.</p>
+        <p>Se ha utilizado en el proyecto porque proporciona una estructura clara y definida para la gestión de ramas que facilita la colaboración y el seguimiento del progreso.
+          La separación de estas ramas ayuda a mantener el enfoque y facilita la identificación y solución de problemas.
+          Esta metodología mantiene una rama main exclusivamente para versiones estables y listas para producción, lo que garantiza que el código en producción sea fiable.
+          Además, es lo suficientemente flexible como para adaptarse a las necesidades específicas de cada equipo o proyecto.</p>
     </section>
 
-    <section id="estilosCSS">
-        <h2>¿Quieres ver un nuevo ejemplo de lo que puedes hacer con JavaScript?</h2>
+    <br/>
 
-        <p id="demoCSS">Con JavaScript puedes cambiar el estilo de un elemento de HTML.</p>
+    <section id="usuario1">
+        <h2>Creación del repositorio y de la estructura inicial por parte de Usuario 1.</h2>
 
-        <button type="button" onclick="document.getElementById('demoCSS').style.fontSize='35px'">¡Pulsa y verás!</button>
+        <p>1. Para comenzar el proyecto, Usuario 1 se encarga de crear el repositorio que se va a utilizar en GitHub. Ese repositorio es después clonado en local para poder trabajar sobre él.</p>
+        <figure>
+          <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-1.png" alt="Creación del repositorio en GitHub">
+          <figcaption>Creación del repositorio del proyecto en GitHub.</figcaption>
+        </figure>
+        <figure>
+          <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-2.png" alt="Clonación del repositorio en local">
+          <figcaption>Clonación del repositorio en local.</figcaption>
+        </figure>
 
-        <h3>Vamos a explicar paso a paso lo que hace el pequeño programa anterior.</h3>
-        <p>Todas las instrucciones están incluidas dentro del botón. Tenemos tres partes diferenciadas:</p>
-        <ul>
-          <li>onclick: aquí indicamos que el código se ejecutará al presionar el botón.</li>
-          <li>getElementById("demoCSS"): accede al elemento en el documento con el id "demoCSS".</li>
-          <li>style.fontSize: modifica el tamaño de letra del elemento seleccionado a 35px.</li>
-        </ul>
-        <p>¡Y por eso al pulsar cambia el tamaño!</p>
+        <p>2. El primer paso es crear la rama develop desde main, ya que es lo que indica la metodología Git Flow. Se publica la rama develop en el repositorio remoto para que esté disponible allí.</p>
+        <figure>
+          <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-3.png" alt="Creación de la rama develop">
+          <figcaption>Creación de la rama develop y publicación en el repositorio remoto.</figcaption>
+        </figure>
+
+        <p>3. Para implementar la estructura inicial del proyecto, utiliza un boilerplate con el modelo que será la base del proyecto.</p>
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-4.png" alt="Archivos del boilerplate">
+            <figcaption>Incorporación al proyecto del modelo del boilerplate recomendado para la actividad.</figcaption>
+        </figure>
+
+        <p>4. En el modelo, el primer paso será implementar la cabecera con la barra de navegación.</p>
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-5.png" alt="Cabecera y barra de navegación">
+            <figcaption>Implementación de la cabecera de la página con el título y la barra de navegación.</figcaption>
+        </figure>
+
+        <p>5. Después implementa la parte central con las secciones que los demás desarrolladores trabajarán y añade una pequeña descripción del curso.</p>
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-6.png" alt="Estructura principal de la página">
+            <figcaption>Creación del contenido principal con las secciones que desarrollarán los demás usuarios y la descripción del curso.</figcaption>
+        </figure>
+
+        <p>6. Lo último a implementar es el pie de página.</p>
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-7.png" alt="Pie de página">
+            <figcaption>Implementación del pie de página del proyecto.</figcaption>
+        </figure>
+
+        <p>7. Por último, añade los cambios al área de preparación (git add), hace commit sobre ellos (git commit) y los publica en el repositorio remoto (git push) para actualizar el proyecto.</p>
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-8.png" alt="Archivos añadidos a staged">
+            <figcaption>Preparación de los archivos modificados mediante el comando git add.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-9.png" alt="Primer commit">
+            <figcaption>Creación del commit para guardar los cambios de la estructura inicial del proyecto.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="Capturas/Usuario-1_Creacion_Repo_Inicio_Proyecto/U1-10.png" alt="Publicación de los cambios">
+            <figcaption>Envío de los cambios al repositorio remoto mediante el comando git push.</figcaption>
+        </figure>
+        
     </section>
 
-    <section id="atributosHTML">
-        <h2>¿Quieres ver qué puedes hacer con JavaScript?</h2>
+    <br/>
 
-        <p>Una de las cosas que puedes hacer es modificar un atributo HTML. ¡Observa!</p>
+    <section id="usuario2">
+      <h2>Integración de la funcionalidad "Modificar Contenido HTML" por parte de Usuario 2.</h2>
 
-        <img id="imgEjemplo" src="https://cdn-icons-png.flaticon.com/512/66/66501.png">
+      <p>1. Para comenzar su parte del proyecto, el Usuario 2 crea una rama de funcionalidad para poder trabajar desde ella.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Contenido_HTML/U2-1.png" alt="Creación de la rama de contenido HTML">
+          <figcaption>Creación de la rama feature/contingutHTML para desarrollar la funcionalidad de modificación del contenido HTML.</figcaption>
+      </figure>
 
-        <button type="button" onclick='document.getElementById("imgEjemplo").setAttribute("src", "https://cdn-icons-png.flaticon.com/512/66/66640.png")'>¡Cambia la imagen!</button>
+      <p>2. Primero crea el bloque de código con el ejemplo para esta sección.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Contenido_HTML/U2-2.png" alt="Ejemplo de modificación del contenido HTML">
+          <figcaption>Creación del bloque de código con un ejemplo que permite modificar el contenido de un elemento HTML mediante JavaScript.</figcaption>
+      </figure>
 
-        <h3>Vamos a explicar paso a paso lo que hace el pequeño programa anterior.</h3>
-        <p>Todas las instrucciones están incluidas dentro del botón. Tenemos tres partes diferenciadas:</p>
-        <ul>
-          <li>onclick: aquí indicamos que el código se ejecutará al presionar el botón.</li>
-          <li>getElementById("imgEjemplo"): accede al elemento en el documento con el id "imgEjemplo".</li>
-          <li>setAttribute: modifica el valor del atributo "src" por el que añadimos a continuación.</li>
-        </ul>
-        <p>¡Y por eso al pulsar tenemos más estrellas!</p>
+      <p>3. Añade la explicación del código del ejemplo para explicar qué hace.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Contenido_HTML/U2-3.png" alt="Explicación del ejemplo de contenido HTML">
+          <figcaption>Incorporación de la explicación del código, detallando cómo se selecciona el elemento y se modifica su contenido.</figcaption>
+      </figure>
+
+      <p>4. Por último, añade los cambios al área de preparación (git add), hace commit sobre ellos (git commit) y los publica en el repositorio remoto (git push) para actualizar el proyecto.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Contenido_HTML/U2-4.png" alt="Commit y publicación de la funcionalidad">
+          <figcaption>Preparación de los cambios, creación del commit y publicación de la rama feature/contingutHTML en el repositorio remoto.</figcaption>
+      </figure>
+    </section>
+
+    <br/>
+
+    <section id="usuario2atributos">
+      <h2>Integración de la funcionalidad "Modificar Atributos HTML" por parte de Usuario 2.</h2>
+
+      <p>1. Para implementar la siguiente funcionalidad que tiene asignada, el Usuario 2 vuelve a la rama develop y crea la nueva rama de funcionalidad para trabajar sobre "modificar atributos HTML".</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-5.png" alt="Creación de la rama de atributos HTML">
+          <figcaption>Vuelta a la rama develop y creación de la rama feature/atributsHTML para trabajar en la siguiente funcionalidad.</figcaption>
+      </figure>
+
+      <p>2. Implementa la sección con un pequeño ejemplo, como en la sección anterior, y añade una explicación de lo que hace el código.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-6.png" alt="Ejemplo de modificación de atributos HTML">
+          <figcaption>Implementación de un ejemplo que permite modificar un atributo de un elemento HTML mediante JavaScript.</figcaption>
+      </figure>
+
+      <p>3. Añade los cambios al área de preparación (git add), hace commit sobre ellos (git commit) y los publica en el repositorio remoto (git push) para actualizar el proyecto.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-7.png" alt="Commit y publicación de atributos HTML">
+          <figcaption>Creación del commit con los cambios de la funcionalidad de atributos HTML y publicación de la rama mediante git push.</figcaption>
+      </figure>
+
+      <p>4. Por último, el Usuario 2, una vez terminado su trabajo, añade sus funcionalidades desarrolladas a la rama develop para actualizar el proyecto en la rama de trabajo. Lo publica todo en el repositorio remoto.</p>
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-8.png" alt="Actualización de develop">
+          <figcaption>Cambio a la rama develop y comprobación de que está actualizada mediante git pull.</figcaption>
+      </figure>
+
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-9.png" alt="Integración de la primera funcionalidad">
+          <figcaption>Integración de la rama feature/contingutHTML en develop mediante el comando git merge.</figcaption>
+      </figure>
+
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-10.png" alt="Integración de la segunda funcionalidad">
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-11.png" alt="Integración de la segunda funcionalidad">
+          <figcaption>Integración de la rama feature/atributsHTML en develop mediante git merge.</figcaption>
+      </figure>
+
+      <figure>
+          <img src="Capturas/Usuario-2_Modificar_Atributos_HTML_Publicar_Remoto/U2-12.png" alt="Publicación de las funcionalidades integradas">
+          <figcaption>Publicación en el repositorio remoto de los cambios integrados en la rama develop.</figcaption>
+      </figure>
+    </section>
+
+    <br/>
+
+    <section id="usuario3">
+      <h2>Integración de la funcionalidad "Modificar Estilos CSS" por parte de Usuario 3.</h2>
+
+      <p>1. El Usuario 3 comienza a trabajar en su asignación. Lo primero que hace es comprobar que está en la rama adecuada, hacer un pull para ver si hay cambios nuevos y crea su rama de funcionalidad sobre la que trabajar.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-1.png" alt="Preparación de develop y creación de la rama CSS">
+          <figcaption>Comprobación de la rama develop, actualización mediante git pull y creación de feature/estilsCSS.</figcaption>
+      </figure>
+
+      <p>2. Implementa su sección con un pequeño ejemplo y una explicación del código, siguiendo la estructura de las otras secciones.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-2.png" alt="Ejemplo de modificación de estilos CSS">
+          <figcaption>Implementación de un ejemplo para modificar el estilo de un elemento HTML mediante JavaScript.</figcaption>
+      </figure>
+
+      <p>3. Añade los cambios al área de preparación (git add), hace commit sobre ellos (git commit) y los publica en el repositorio remoto (git push) para actualizar el proyecto.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-3.png" alt="Explicación del ejemplo CSS">
+      </figure>
+
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-4.png" alt="Creación del commit de estilos CSS">
+          <figcaption>Preparación de los cambios y creación del commit de la funcionalidad de modificación de estilos CSS.</figcaption>
+      </figure>
+
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-5.png" alt="Publicación de la rama CSS">
+          <figcaption>Publicación de la rama feature/estilsCSS en el repositorio remoto mediante git push.</figcaption>
+      </figure>
+
+      <p>4. Después cambia a la rama develop para integrar los cambios realizados mediante el comando git merge.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-6.png" alt="Integración de los estilos CSS">
+          <figcaption>Integración de la rama feature/estilsCSS en develop mediante git merge.</figcaption>
+      </figure>
+
+      <p>5. Por último, publica los cambios en el repositorio repoto para actualizar el proyecto e integrar los últimos cambios que ha realizado.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Modificar_Estilos_CSS/U3-7.png" alt="Publicación de los cambios CSS">
+          <figcaption>Publicación en el repositorio remoto de los cambios integrados en develop.</figcaption>
+      </figure>
+
+    </section>
+
+    <br/>
+
+    <section id="usuario3release">
+      <h2>Creación de una release para añadir una etiqueta al proyecto por parte de Usuario 3.</h2>
+
+      <p>1. Es trabajo del Usuario 3 crear una nueva release con todas las features para añadir una etiqueta. Para ello, crea una nueva rama release.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Release_v1.0/U3-8.png" alt="Creación de la rama release">
+          <figcaption>Creación de la rama release/1.0 para preparar una nueva versión con las funcionalidades desarrolladas.</figcaption>
+      </figure>
+
+      <p>2. Después cambia a main, integra la release con un merge y añade la etiqueta v1.0 a esta primera versión del proyecto.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Release_v1.0/U3-9.png" alt="Integración de release y etiqueta v1.0">
+          <figcaption>Integración de release/1.0 en main mediante git merge y creación de la etiqueta v1.0.</figcaption>
+      </figure>
+
+      <p>3. Luego sube los cambios al repositorio remoto y hace lo mismo con la etiqueta.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Release_v1.0/U3-10.png" alt="Publicación de la versión v1.0">
+          <figcaption>Publicación de la rama main y de la etiqueta v1.0 en el repositorio remoto.</figcaption>
+      </figure>
+
+      <p>4. Por último, repite el merge con develop para comprobar que está actualizada con la etiqueta.</p>
+      <figure>
+          <img src="Capturas/Usuario-3_Release_v1.0/U3-11.png" alt="Comprobación de develop después de la release">
+          <figcaption>Comprobación de que la rama develop también contiene los cambios de la release.</figcaption>
+      </figure>
+    </section>
+
+    <br/>
+
+    <section id="usuario1hotfix">
+      <h2>Mejoras en la funcionalidad "Modificar Contenido HTML" por parte de Usuario 1.</h2>
+
+      <p>1. Será el Usuario 1 el que decidirá mejorar una de las secciones. Para ello, crea una rama hotfix desde main para implementar las mejoras.</p>
+      <figure>
+          <img src="Capturas/Usuario-1_Hotfix/U1-11.png" alt="Creación de la rama hotfix">
+          <figcaption>Creación de la rama hotfix/milloresV_1_0 para mejorar la sección de modificación del contenido HTML.</figcaption>
+      </figure>
+
+      <p>2. Realiza el cambio añadiendo un nuevo botón al ejemplo.</p>
+      <figure>
+          <img src="Capturas/Usuario-1_Hotfix/U1-12.png" alt="Nuevo botón para deshacer los cambios">
+          <figcaption>Incorporación de un segundo botón al ejemplo para recuperar el contenido original del elemento HTML.</figcaption>
+      </figure>
+
+      <p>3. Prepara los cambios efectuados y hace un commit de los mismos.</p>
+      <figure>
+          <img src="Capturas/Usuario-1_Hotfix/U1-13.png" alt="Commit de la mejora">
+          <figcaption>Preparación de los cambios y creación del commit con la mejora de la sección de contenido HTML.</figcaption>
+      </figure>
+
+      <p>4. Luego integra los cambios realizados en la rama hotfix a la rama main y los publica en el repositorio remoto.</p>
+      <figure>
+          <img src="Capturas/Usuario-1_Hotfix/U1-14.png" alt="Integración del hotfix en main">
+          <figcaption>Integración del hotfix en main y publicación de los cambios en el repositorio remoto.</figcaption>
+      </figure>
+
+      <p>5. Por último, repite el proceso desde la rama develop para integrar los cambios y publicarlos en el repositorio remoto.</p>
+      <figure>
+          <img src="Capturas/Usuario-1_Hotfix/U1-15.png" alt="Integración del hotfix en develop">
+          <figcaption>Integración de las mejoras en develop y publicación de los cambios en el repositorio remoto.</figcaption>
+      </figure>
     </section>
   </main>
 
 
 <footer>
-    <p>© 2026 Curso JS interacciones HTML · <a href="https://administracion.gob.es/pag_Home/avisoLegal.html">Aviso legal</a></p>
+    <p>© 2026 Práctica Sistema de Control de Versiones - Amanda García Fernández - 2º DAW Semi · <a href="https://github.com/MandyBrox/ProyectoCursoJavascript">Repositorio GitHub</a></p>
 </footer>
 
   <script src="js/app.js"></script>
